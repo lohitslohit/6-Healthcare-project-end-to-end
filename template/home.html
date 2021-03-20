@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}"> -->
+<title>Home</title>
+<link rel="shortcut icon" href="https://static.thenounproject.com/png/2010152-200.png" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
+
+</head>
+<style>
+
+  .appli{
+    background-color: white;
+    padding: 30px;
+    padding-left: 150px;
+    padding-top: 150px;
+    padding-right: 150px;
+   
+  }
+  footer{
+    border-bottom: 50px
+  }
+  button{
+   color: white;
+    
+  }
+  .toppic{
+    font-family: 'Open Sans Condensed', sans-serif;
+  }
+</style>
+
+<body>
+  <div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item ">
+            <a class="nav-link active" href="/">Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/cancer">Cancer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/diabetes">Diabetes<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/heart">Heart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/liver">Liver</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Malaria">Malaria</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Pneumonia">Pneumonia</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <h4><center><b class="topic">Welcome To online checkup </b></center></h4>
+
+  
+
+  <div class= "container">
+
+     <div class="col-md-8">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+          {% block content %}{% endblock %}
+                </div>
+  </div>
+ <div class="appli">
+      <h2>Overview</h2>
+      <p>The project is based on machine learning and deep learning.The deployment is done by Flask</p>
+      <br><br>
+      <h2  style="text-align:center;">Technology used:</h2>
+      <br>
+      <h3>Machine learning</h3>
+      <p> Machine learning (ML) is the study of computer algorithms that improve automatically through experience and by the use of data.
+        It is seen as a part of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", 
+        in order to make predictions or decisions without being explicitly programmed to do so.Machine learning algorithms are used in a wide 
+        variety of applications, such as email filtering and computer vision, where it is difficult or unfeasible to develop conventional algorithms 
+        to perform the needed tasks.A subset of machine learning is closely related to computational statistics, which focuses on making predictions 
+        using computers; but not all machine learning is statistical learning. The study of mathematical optimization delivers methods, theory and 
+        application domains to the field of machine learning. For more advanced tasks, it 
+        can be challenging for a human to manually create the needed algorithms. In practice, it can turn out to be more effective to help the machine 
+        develop its own algorithm, rather than having human programmers specify every needed step. The discipline of machine learning employs various 
+        approaches to teach computers to accomplish tasks where no fully satisfactory algorithm is available. In cases where vast numbers of potential
+       answers exist, one approach is to label some of the correct answers as valid. This can then be used as training data for the computer to
+        improve the algorithm(s) it uses to determine correct answers. For example, to train a system for the task of digital character recognition, 
+        the MNIST dataset of handwritten digits has often been used.</p>
+      <h3>Deep learning</h3>
+      <p>In deep learning, a convolutional neural network (CNN, or ConvNet) is a class of deep neural networks, most commonly applied to analyzing 
+        visual imagery.They are also known as shift invariant or space invariant artificial neural networks (SIANN), based on the shared-weight 
+        architecture of the convolution kernels that scan the hidden layers and translation invariance characteristics.
+         They have applications in image and video recognition, recommender systems, image classification, Image segmentation,
+          medical image analysis, natural language processing, brain-computer interfaces, and financial time series.
+
+        CNNs are regularized versions of multilayer perceptrons. Multilayer perceptrons usually mean fully connected
+         networks, that is, each neuron in one layer is connected to all neurons in the next layer. The "fully-connectedness"
+          of these networks makes them prone to overfitting data. Typical ways of regularization include varying the weights as the
+           loss function gets minimized while randomly trimming connectivity. CNNs take a different approach towards regularization
+           : they take advantage of the hierarchical pattern in data and assemble patterns of increasing complexity using smaller and simpler 
+           patterns embossed in the filters. Therefore, on the scale of connectedness and complexity, CNNs are on the lower extreme.</p>
+
+  </div>
+
+
+
+<footer class="bg-dark ">
+<center><button type="button" class="btn bg-dark"><a href="mailto:lohit.cs19@bitsathy.ac.in" class="text-white">Contact</a></button></center>
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

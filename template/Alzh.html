@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	  <title>Diabetes Calculator</title>
+    <link rel="shortcut icon" href="https://static.thenounproject.com/png/2010152-200.png" type="image/x-icon">
+
+    
+</head>
+<body>
+      <div>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/cancer">Cancer</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/diabetes">Diabetes<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/heart">Heart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" ref="/liver">Liver</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Malaria">Malaria</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Pneumonia">Pneumonia</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      
+        <h3>Enter the </h3>
+        <center>
+          <h3>Enter the Following parameters :</h3>
+        </center>
+      <div class="row container form-group" >
+
+        <form class="col s6" action="/result" method="POST">
+          <div class="row">
+              <div class="input-field s6">
+                <label for="Pregnancies">Pregnancies : </label>
+                <input type="text" id="Pregnancies" name="Pregnancies">
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field">
+                <label for="Glucose">Glucose : </label>
+                <input type="text" id="Glucose" name="Glucose">
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field">
+                <label for="BloodPressure">BloodPressure : </label>
+                <input type="text" id="BloodPressure" name="BloodPressure">
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field">
+                <label for="SkinThickness">SkinThickness : </label>
+                <input type="text" id="SkinThickness" name="SkinThickness">
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field">
+                <label for="Insulin">Insulin : </label>
+                <input type="text" id="Insulin" name="Insulin">
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field">
+                <label for="BMI">BMI : </label>
+                <input type="text" id="BMI" name="BMI">
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field">
+                <label for="DiabetesPedigreeFunction">DiabetesPedigreeFunction : </label>
+                <input type="text" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction">
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field">
+                <label for="Age">Age : </label>
+                <input type="text" id="Age" name="Age">
+              </div>
+            </div>
+
+          </div>
+          <input type="submit" value="Submit">
+        </form>
+
+      </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

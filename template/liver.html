@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="shortcut icon" href="https://static.thenounproject.com/png/2010152-200.png" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<title>Liver calculator</title>
+    
+</head>
+<style>
+
+  .appli{
+    background-color: white;
+    padding: 30px;
+    padding-left: 150px;
+    padding-top: 15px;
+    padding-right: 150px;
+   
+  }
+  footer{
+    border-bottom: 50px
+  }
+  button{
+   color: white;
+    
+  }
+</style>
+<body>
+  <div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item ">
+            <a class="nav-link" href="/">Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/cancer">Cancer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/diabetes">Diabetes</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/heart">Heart</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/liver">Liver<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Malaria">Malaria</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Pneumonia">Pneumonia</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="appli">
+    <center><h3>Heart </h3>
+    <img src="data:image/jpeg;base64,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" height="300px" width="500px" alt="" srcset=""></center><br>
+    <h4>Overview:</h4>
+    
+    <p>Viral infection by (HBV), or (HCV) causes an increase of reactive oxygen species (ROS). The increase in intracellular 
+      ROS is about 10,000-fold with chronic HBV infection and 100,000-fold following HCV infection.[citation needed] This
+       increase in ROS causes inflammation and further increase in ROS.[citation needed] ROS cause more than 20 types of DNA damage.
+        Oxidative DNA damage is mutagenic and also causes epigenetic alterations at the sites of DNA repair.
+         Epigenetic alterations and mutations affect the cellular machinery that may cause the cell to replicate at a higher rate or result
+          in the cell avoiding apoptosis, and thus contribute to liver disease. By the time accumulating epigenetic and mutational changes
+           eventually cause hepatocellular carcinoma, epigenetic alterations appear to have an even larger role in carcinogenesis
+            than mutations. Only one gene, TP53, is mutated in more than 20% of liver cancers while 41 genes each have hypermethylated promoters
+             (repressing gene expression) in more than 20% of liver cancers.
+
+      Alcohol consumption in excess causes a build-up of acetaldehyde. Acetaldehyde and free radicals generated by metabolizing alcohol
+       induce DNA damage and oxidative stress. In addition, activation of neutrophils in alcoholic liver disease contributes
+        to the pathogenesis of hepatocellular damage by releasing reactive oxygen species (which can damage DNA). The level of oxidative 
+        stress and acetaldehyde-induced DNA adducts due to alcohol consumption does not appear sufficient to cause increased mutagenesis.
+         However, as reviewed by Nishida et al., alcohol exposure, causing oxidative DNA damage (which is repairable), can result in 
+         epigenetic alterations at the sites of DNA repair. Alcohol-induced epigenetic alterations of gene expression appear to lead to liver
+          injury and ultimately carcinoma.</p><br>
+    <h4>Causes</h4>
+    <p>Fascioliasis, a parasitic infection of liver caused by a liver fluke of the genus Fasciola, mostly the Fasciola hepatica.
+      Hepatitis, inflammation of the liver, is caused by various viruses (viral hepatitis) also by some liver toxins (e.g. alcoholic hepatitis)
+      , autoimmunity (autoimmune hepatitis) or hereditary conditions.
+      Alcoholic liver disease is a hepatic manifestation of alcohol overconsumption, including fatty liver disease, alcoholic hepatitis, and 
+      cirrhosis. Analogous terms such as "drug-induced" or "toxic" liver disease are also used to refer to disorders caused by various drugs.
+      Fatty liver disease (hepatic steatosis) is a reversible condition where large vacuoles of triglyceride fat accumulate in liver cells. 
+      Non-alcoholic fatty liver disease is a spectrum of disease associated with obesity and metabolic syndrome.
+      Hereditary diseases that cause damage to the liver include hemochromatosis, involving accumulation of iron in the body, and Wilson's 
+      disease. Liver damage is also a clinical feature of alpha 1-antitrypsin deficiency and glycogen storage disease type II.
+      In transthyretin-related hereditary amyloidosis, the liver produces a mutated transthyretin protein which has severe neurodegenerative 
+      or cardiopathic effects. Liver transplantation can give a curative treatment option.
+      Gilbert's syndrome, a genetic disorder of bilirubin metabolism found in a small percent of the population, can cause mild jaundice</p>
+
+  </div><br><br>
+
+<div class="container",class="form-group">
+  <center><h3>Calculate Liver disease with following parameters</h3></center><br>
+
+  <form action="/result" method="POST" class="col s12">
+
+    <div class="row">
+      <div class="col input-field">
+        <label for="Age">Age : </label>
+        <input type="text" id="Age" name="Age">
+      </div>
+      <div class="col input-field">
+        <div class="input-field">
+          <label for="Gender">Gender : </label>
+          <input type="text" id="Gender" name="Gender">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col input-field">
+        <label for="Total_Bilirubin">Total_Bilirubin : </label>
+        <input type="text" id="Total_Bilirubin" name="Total_Bilirubin">
+      </div>
+      <div class="col input-field">
+        <div class="input-field">
+          <label for="Direct_Bilirubin">Direct_Bilirubin : </label>
+          <input type="text" id="Direct_Bilirubin" name="Direct_Bilirubin">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col input-field">
+        <label for="Alkaline_Phosphotase">Alkaline_Phosphotase : </label>
+        <input type="text" id="Alkaline_Phosphotase" name="Alkaline_Phosphotase">
+      </div>
+      <div class="col input-field">
+        <div class="input-field">
+          <label for="Alamine_Aminotransferase">Alamine_Aminotransferase : </label>
+          <input type="text" id="Alamine_Aminotransferase" name="Alamine_Aminotransferase">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col input-field">
+        <label for="Aspartate_Aminotransferase">Aspartate_Aminotransferase : </label>
+        <input type="text" id="Aspartate_Aminotransferase" name="Aspartate_Aminotransferase">
+      </div>
+      <div class="col input-field">
+        <div class="input-field">
+          <label for="Total_Protiens">Total_Protiens : </label>
+          <input type="text" id="Total_Protiens" name="Total_Protiens">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col input-field">
+        <label for="Albumin">Albumin : </label>
+        <input type="text" id="Albumin" name="Albumin">
+      </div>
+      <div class="col input-field">
+        <div class="input-field">
+          <label for="Albumin_and_Globulin_Ratio">Albumin_and_Globulin_Ratio : </label>
+          <input type="text" id="Albumin_and_Globulin_Ratio" name="Albumin_and_Globulin_Ratio">
+        </div>
+      </div>
+    </div>
+    <center><input type="submit" value="Submit" class="btn btn-dark"></center>
+    <br><br>
+</form>
+
+
+    </div>
+    <footer class="bg-dark ">
+      <center><button type="button" class="btn bg-dark"><a href="mailto:lohit.cs19@bitsathy.ac.in" class="text-white">Contact</a></button></center>
+    
+    
+      <br><br>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>

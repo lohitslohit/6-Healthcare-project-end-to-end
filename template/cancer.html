@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="shortcut icon" href="https://static.thenounproject.com/png/2010152-200.png" type="image/x-icon">
+	  <title>Cancer</title>
+</head>
+<style>
+
+  .appli{
+    background-color: white;
+    padding: 30px;
+    padding-left: 150px;
+    padding-top: 15px;
+    padding-right: 150px;
+   
+  }
+  footer{
+    border-bottom: 50px
+  }
+  button{
+   color: white;
+    
+  }
+</style>
+<body>
+
+  <div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/cancer">Cancer<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/diabetes">Diabetes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/heart">Heart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/liver">Liver</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Malaria">Malaria</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Pneumonia">Pneumonia</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="appli">
+    <center><h3>Cancer</h3>
+    <img src="https://singularityhub.com/wp-content/uploads/2019/07/3D-immune-system-t-cells-health-shutterstock-775583896-1068x601.jpg" alt="" srcset=""></center><br>
+    <h4>Overview:</h4>
+    
+    <p>Cancer is a group of diseases involving abnormal cell growth with the potential to invade or spread to other parts of the body.
+      These contrast with benign tumors, which do not spread. Possible signs and symptoms include a lump, abnormal bleeding, prolonged
+       cough, unexplained weight loss, and a change in bowel movements. While these symptoms may indicate cancer, they can also have other causes.
+        Over 100 types of cancers affect humans.
+
+      Tobacco use is the cause of about 22% of cancer deaths. Another 10% are due to obesity, poor diet, lack of physical activity or excessive
+       drinking of alcohol.Other factors include certain infections, exposure to ionizing radiation, and environmental pollutants.
+        In the developing world, 15% of cancers are due to infections such as Helicobacter pylori, hepatitis B, hepatitis C, human 
+        papillomavirus infection, Epstein–Barr virus and human immunodeficiency virus (HIV).
+        These factors act, at least partly, by changing the genes of a cell.
+        Typically, many genetic changes are required before cancer develops.
+         Approximately 5–10% of cancers are due to inherited genetic defects. Cancer can be detected by certain signs and symptoms or screening tests. It is then 
+         typically further investigated by medical imaging and confirmed by biopsy.</p><br>
+    <h4>Causes</h4>
+    <p>The majority of cancers, some 90–95% of cases, are due to genetic mutations from environmental and lifestyle factors.
+      The remaining 5–10% are due to inherited genetics.
+      Environmental refers to any cause that is not inherited, such as lifestyle, 
+      economic, and behavioral factors and not merely pollution.
+       Common environmental factors that contribute to cancer death include tobacco use 
+      (25–30%), diet and obesity (30–35%), infections (15–20%), radiation (both ionizing and non-ionizing, up to 10%), lack of physical activity, and pollution.
+       Psychological stress does not appear to be a risk factor for the onset of cancer,though it may worsen outcomes in those who already have cancer.
+
+      It is not generally possible to prove what caused a particular cancer because the various causes
+       do not have specific fingerprints. For example, if a person who uses tobacco heavily develops lung cancer, the
+       n it was probably caused by the tobacco use, but since everyone has a small chance of developing lung cancer as a result of air pollution or
+        radiation, the cancer may have developed for one of those reasons. Excepting the rare transmissions that occur with pregnancies and occasional organ donors, 
+        cancer is generally not a transmissible disease.</p>
+
+  </div><br><br>
+ 
+    <div class="container">
+      <center><h4>Calculate Cancer with following parameters</h4></center>
+    <form class="col s12" action="/result" method="POST">
+    <div class="row">
+        <div class="col input-field">
+          <label for="Radius_mean">Radius_mean : </label>
+          <input type="text" id="Radius_mean" name="Radius_mean">
+        </div>
+        <div class="col input-field">
+          <label for="Texture_mean">Texture_mean : </label>
+          <input type="text" id="Texture_mean" name="Texture_mean">
+        </div>
+    </div>
+    <div class="row">
+      <div class="col input-field">
+        <label for="BloodPressure">Perimeter_mean : </label>
+        <input type="text" id="Perimeter_mean" name="Perimeter_mean">
+      </div>
+      <div class="col input-field">
+        <label for="Area_mean">Area_mean : </label>
+        <input type="text" id="Area_mean" name="Area_mean">
+      </div>
+  </div>
+  <div class="row">
+    <div class="col input-field">
+      <label for="Smoothness_mean">Smoothness_mean : </label>
+      <input type="text" id="Smoothness_mean" name="Smoothness_mean">
+    </div>
+    <div class="col input-field">
+      <label for="Compactness_mean">Compactness_mean: </label>
+      <input type="text" id="Compactness_mean" name="Compactness_mean">
+    </div>
+</div>
+<div class="row">
+  <div class="col input-field">
+    <label for="Concavity_mean">Concavity_mean: </label>
+    <input type="text" id="Concavity_mean" name="Concavity_mean">
+  </div>
+  <div class="col input-field">
+    <label for="concave points_mean">Concave points_mean: </label>
+    <input type="text" id="concave points_mean" name="concave points_mean">
+  </div>
+</div>
+<div class="row">
+  <div class="col input-field">
+    <label for="symmetry_mean">Symmetry_mean: </label>
+    <input type="text" id="symmetry_mean" name="symmetry_mean">
+  </div>
+  <div class="col input-field">
+    <label for="Compactness_mean">Fractal_dimension_mean: </label>
+    <input type="text" id="fractal_dimension_mean" name="fractal_dimension_mean">
+  </div>
+</div>
+<div class="row">
+  <div class="col input-field">
+    <label for="radius_se">Radius_se: </label>
+    <input type="text" id="radius_se" name="radius_se">
+  </div>
+  <div class="col input-field">
+    <label for="texture_se">Texture_se: </label>
+    <input type="text" id="texture_se" name="texture_se">
+  </div>
+</div>
+<div class="row">
+  <div class="col input-field">
+    <label for="perimeter_se">Perimeter_se: </label>
+    <input type="text" id="perimeter_se" name="perimeter_se">
+  </div>
+  <div class="col input-field">
+    <label for="area_se">Area_se: </label>
+    <input type="text" id="area_se" name="area_se">
+  </div>
+</div>
+<div class="row">
+  <div class="col input-field">
+    <label for="smoothness_se">Smoothness_se: </label>
+    <input type="text" id="smoothness_se" name="smoothness_se">
+  </div>
+  <div class="col input-field">
+    <label for="compactness_se">Compactness_se: </label>
+    <input type="text" id="compactness_se" name="compactness_se">
+  </div>
+</div>
+<div class="row">
+  <div class="col input-field">
+    <label for="concavity_se">Concavity_se: </label>
+    <input type="text" id="concavity_se" name="concavity_se">
+  </div>
+  <div class="col input-field">
+    <label for="concave points_se">Concave points_se: </label>
+    <input type="text" id="concave points_se" name="concave points_se">
+  </div>
+</div>
+<div class="row">
+  <div class="col input-field">
+    <label for="symmetry_se">Symmetry_se: </label>
+    <input type="text" id="symmetry_se" name="symmetry_se">
+  </div>
+  <div class="col input-field">
+    <label for="fractal_dimension_se">Fractal_dimension_se: </label>
+    <input type="text" id="fractal_dimension_se" name="fractal_dimension_se">
+  </div>
+</div>
+<div class="row">
+  <div class="col input-field">
+    <label for="radius_worst">Radius_worst: </label>
+    <input type="text" id="radius_worst" name="radius_worst">
+  </div>
+  <div class="col input-field">
+    <label for="texture_worst">Texture_worst: </label>
+    <input type="text" id="texture_worst" name="texture_worst">
+  </div>
+</div>
+<div class="row">
+  <div class="col input-field">
+    <label for="area_worst">Area_worst: </label>
+    <input type="text" id="area_worst" name="area_worst">
+  </div>
+  <div class="col input-field">
+    <label for="smoothness_worst">Smoothness_worst: </label>
+    <input type="text" id="smoothness_worst" name="smoothness_worst">
+  </div>
+</div>
+<div class="row">
+  <div class="col input-field">
+    <label for="compactness_worst">Compactness_worst: </label>
+    <input type="text" id="compactness_worst" name="compactness_worst">
+  </div>
+  <div class="col input-field">
+    <label for="concavity_worst">Concavity_worst: </label>
+    <input type="text" id="concavity_worst" name="concavity_worst">
+  </div>
+</div>
+<div class="row">
+  <div class="col input-field">
+    <label for="concave points_worst">Concave points_worst: </label>
+    <input type="text" id="concave points_worst" name="concave points_worst">
+  </div>
+  <div class="col input-field">
+    <label for="symmetry_worst">Symmetry_worst : </label>
+    <input type="text" id="symmetry_worst" name="symmetry_worst">
+  </div>
+</div>
+<div class="row">
+  <div class="col input-field">
+    <label for="fractal_dimension_worst">Fractal_dimension_worst : </label>
+    <input type="text" id="fractal_dimension_worst" name="fractal_dimension_worst">
+  </div>
+  <div class="col input-field">
+    <label for="perimeter_worst">Perimeter_worst: </label>
+    <input type="text" id="perimeter_worst" name="perimeter_worst">
+  </div>
+</div>
+
+    
+
+    <center><input type="submit" value="Submit" class="btn btn-dark"></center>
+    <br><br>
+</form>
+
+    </div>
+
+    <footer class="bg-dark ">
+      <center><button type="button" class="btn bg-dark"><a href="mailto:lohit.cs19@bitsathy.ac.in" class="text-white">Contact</a></button></center>
+    
+    
+      <br><br>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+  <title>Malaria Cell Classification</title>
+      <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="https://static.thenounproject.com/png/2010152-200.png" type="image/x-icon">
+
+</head>
+
+<script>
+    function showloading() {
+        image = document.getElementById('loading_image');
+        image.style.display = 'inline'
+    }
+</script>
+
+<style>
+
+  .appli{
+    background-color: white;
+    padding: 30px;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
+   
+  }
+  footer{
+    border-bottom: 50px
+  }
+  button{
+   color: white;
+    
+  }
+</style>
+<body>
+  <div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item ">
+            <a class="nav-link" href="/">Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/cancer">Cancer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/diabetes">Diabetes</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/heart">Heart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/liver">Liver</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/Malaria">Malaria <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Pneumonia">Pneumonia</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+<header class="container">
+  <div id= "left_m" class="col-md-3">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+          {% block content %}{% endblock %}
+  </div>
+  <div class="appli">
+    <center><h3>Malaria </h3></center>
+    <h4>Overview:</h4>
+    
+    <p>Malaria is a mosquito-borne infectious disease that affects humans and other animals.
+      Malaria causes symptoms that typically include fever, tiredness, vomiting, and headaches.
+       In severe cases, it can cause yellow skin, seizures, coma, or death.
+      Symptoms usually begin ten to fifteen days after being bitten by an infected mosquito.
+      If not properly treated, people may have recurrences of the disease months later.
+      In those who have recently survived an infection, reinfection usually causes milder symptoms.
+      This partial resistance disappears over months to years if the person has no continuing exposure to malaria.
+
+      Malaria is caused by single-celled microorganisms of the Plasmodium group. The disease is most 
+      commonly spread by an infected female Anopheles mosquito.The mosquito bite introduces
+       the parasites from the mosquito's saliva into a person's blood.The parasites travel 
+       to the liver where they mature and reproduce.Five species of Plasmodium can infect and be 
+       spread by humans. Most deaths are caused by P. falciparum, whereas P. vivax, P. ovale, and P.
+        malariae generally cause a milder form of malaria. The species P. knowlesi rarely causes disease in humans.
+         Malaria is typically diagnosed by the microscopic examination of blood using blood films, or with antigen-based rapid
+          diagnostic tests. Methods that use the polymerase chain reaction to detect the parasite's DNA have been developed, 
+          but are not widely used in areas where malaria is common due to their cost and complexity.</p><br>
+    <h4>Causes</h4>
+    <p>Malaria parasites belong to the genus Plasmodium (phylum Apicomplexa). In humans, malaria is caused by P. falciparum, 
+      P. malariae, P. ovale, P. vivax and P. knowlesi. Among those infected, P. falciparum is the most common species 
+      identified (~75%) followed by P. vivax (~20%). Although P. falciparum traditionally accounts for the majority of deaths,
+      recent evidence suggests that P. vivax malaria is associated with potentially life-threatening conditions about as often as with
+       a diagnosis of P. falciparum infection.P. vivax proportionally is more common outside Africa. There have been documented
+        human infections with several species of Plasmodium from higher apes; however, except for P. knowlesi—a zoonotic species that 
+        causes
+         malaria in macaques—these are mostly of limited public health importance</p>
+
+  </div><br><br>
+
+  <h3 style="margin: auto;width: 80%; text-align: center; margin-top: 20px;  text-transform: uppercase">Malaria Cell Classification</h3>
+
+   <div style="text-align: center; margin-top: 20px">
+       <img style="max-width: 600px" src="{{ url_for('static', filename='malaria.jpg') }}"/>
+   </div>
+
+  <form action="/upload" method="post" enctype="multipart/form-data" style="margin-top: 30px; width: 80%; text-align: center; margin: auto;" onsubmit="showloading()">
+      <span class="btn btn-default btn-file">
+        Select Image <input type="file" name="image">
+    </span><br><br>
+        <input type="submit" value="Upload" class="btn btn-primary">
+  </form><hr><div style="text-align:center">
+    <!-- <a href="/"><input type="submit" value="Back to Home"></a></div> -->
+    <div style="text-align: center">
+        <img id="loading_image" style="display: none" src="{{ url_for('static', filename='loading.jfif')}}">
+    </div>
+  </header>
+    <footer class="bg-dark ">
+      <center><button type="button" class="btn bg-dark"><a href="mailto:lohit.cs19@bitsathy.ac.in" class="text-white">Contact</a></button></center>
+    
+ 
+
+    </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+</body>
+</html>

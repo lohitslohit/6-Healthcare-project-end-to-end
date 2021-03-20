@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	  <title>Heart Calculator</title>
+    <link rel="shortcut icon" href="https://static.thenounproject.com/png/2010152-200.png" type="image/x-icon">
+    
+</head>
+<style>
+
+  .appli{
+    background-color: white;
+    padding: 30px;
+    padding-left: 150px;
+    padding-top: 15px;
+    padding-right: 150px;
+   
+  }
+  footer{
+    border-bottom: 50px
+  }
+  button{
+   color: white;
+    
+  }
+</style>
+<body>
+  
+  <div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item ">
+            <a class="nav-link" href="/">Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/cancer">Cancer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/diabetes">Diabetes<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/heart">Heart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/liver">Liver</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Malaria">Malaria</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Pneumonia">Pneumonia</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="appli">
+    <center><h3>Heart </h3>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSiTeB8oWEti86B6A6YZ5MPJ8SlyVjjellmA&usqp=CAU" height="300px" width="500px" alt="" srcset=""></center><br>
+    <h4>Overview:</h4>
+    
+    <p>Cardiovascular disease (CVD) is a class of diseases that involve the heart or blood vessels.
+      CVD includes coronary artery diseases (CAD) such as angina and myocardial infarction (commonly known as a heart attack).
+       Other CVDs include stroke, heart failure, hypertensive heart disease, rheumatic heart disease, cardiomyopathy, abnormal
+        heart rhythms, congenital heart disease, valvular heart disease, carditis, aortic aneurysms, peripheral artery disease,
+         thromboembolic disease, and venous thrombosis.
+
+      The underlying mechanisms vary depending on the disease.
+       Coronary artery disease, stroke, and peripheral artery disease involve atherosclerosis.
+        This may be caused by high blood pressure, smoking, diabetes mellitus, lack of exercise, obesity, high blood cholesterol,
+         poor diet, and excessive alcohol consumption, among others.
+          High blood pressure is estimated to account for approximately 13% of CVD deaths, while tobacco accounts for 9%,
+           diabetes 6%, lack of exercise 6% and obesity 5%. Rheumatic heart disease may follow untreated strep throat.</p><br>
+    <h4>Causes</h4>
+    <p>There are many risk factors for heart diseases: age, sex, tobacco use, physical inactivity, excessive alcohol consumption, 
+      unhealthy diet, obesity, genetic predisposition and family history of cardiovascular disease, raised blood pressure (hypertension),
+       raised blood sugar (diabetes mellitus), raised blood cholesterol (hyperlipidemia), undiagnosed celiac disease, psychosocial factors, 
+       poverty and low educational status, and air pollution.While the individual contribution of each risk factor varies between different 
+       communities or ethnic groups the overall contribution of these risk factors is very consistent.Some of these risk factors, such as age, 
+       sex or family history/genetic predisposition, are immutable; however, many important cardiovascular risk factors are modifiable by
+        lifestyle change, social change, drug treatment (for example prevention of hypertension, hyperlipidemia, and diabetes). People with obesity 
+        are at increased risk of atherosclerosis of the coronary arteries.</p>
+
+  </div><br><br>
+
+<div class="container">
+<h3>Calculate Heart disease with following parameters</h3><br>
+<br>
+  <form class="col s12" action="/result" method="POST">
+    
+    <div class="row">
+      <div class="col input-field">
+        <label for="age">Age : </label>
+        <input type="text" id="age" name="age">
+      </div>
+      <div class="col input-field">
+        <div class="input-field">
+          <label for="sex">Sex(1:Male,0:Female) : </label>
+          <input type="text" id="sex" name="sex">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col input-field">
+        <label for="chest pain type">Chest pain type : </label>
+        <input type="text" id="chest pain type" name="chest pain type">
+      </div>
+      <div class="col input-field">
+        <div class="input-field">
+          <label for="trestbps">Trestbps : </label>
+          <input type="text" id="trestbps" name="trestbps">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col input-field">
+        <label for="serum cholestoral in mg/dl">Serum cholestoral in mg/dl : </label>
+        <input type="text" id="serum cholestoral in mg/dl" name="serum cholestoral in mg/dl">
+      </div>
+      <div class="col input-field">
+        <div class="input-field">
+          <label for="fbs">FBS : </label>
+          <input type="text" id="fbs" name="fbs">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col input-field">
+        <label for="restecg">Restecg : </label>
+        <input type="text" id="restecg" name="restecg">
+      </div>
+      <div class="col input-field">
+        <div class="input-field">
+          <label for="thalach">Thalach : </label>
+          <input type="text" id="thalach" name="thalach">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col input-field">
+        <label for="exang">Exang : </label>
+        <input type="text" id="exang" name="exang">
+      </div>
+      <div class="col input-field">
+        <div class="input-field">
+          <label for="oldpeak">Oldpeak : </label>
+          <input type="text" id="oldpeak" name="oldpeak">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col input-field">
+        <label for="slope">Slope : </label>
+        <input type="text" id="slope" name="slope">
+      </div>
+      <div class="col input-field">
+        <div class="input-field">
+          <label for="ca">CA : </label>
+          <input type="text" id="ca" name="ca">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col input-field">
+        <label for="thal">Thal : </label>
+        <input type="text" id="thal" name="thal">
+      </div>
+    </div>
+
+ 
+    <input type="submit" value="Submit" class="btn btn-dark"><br><br>
+</form>
+
+
+    </div>
+
+    <footer class="bg-dark ">
+      <center><button type="button" class="btn bg-dark"><a href="mailto:lohit.cs19@bitsathy.ac.in" class="text-white">Contact</a></button></center>
+    
+    
+      <br><br>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+</body>
+</html>

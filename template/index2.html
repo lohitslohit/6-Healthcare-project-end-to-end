@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+  <title>Pneumonia</title>
+      <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="https://static.thenounproject.com/png/2010152-200.png" type="image/x-icon">
+
+</head>
+
+<script>
+    function showloading() {
+        image = document.getElementById('loading_image');
+        image.style.display = 'inline'
+    }
+</script>
+
+
+<style>
+
+  .appli{
+    background-color: white;
+    padding: 30px;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
+   
+  }
+  footer{
+    border-bottom: 50px
+  }
+  button{
+   color: white;
+    
+  }
+</style>
+
+<body>
+  <header class="site-header">
+    <div>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link" href="/">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/cancer">Cancer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/diabetes">Diabetes</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="/heart">Heart</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/liver">Liver</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Malaria">Malaria 
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/Pneumonia">Pneumonia<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+</header>
+<div class="container">
+<div id= "left_m" class="col-md-3">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+          {% block content %}{% endblock %}
+  </div>
+  <div class="appli">
+    <h3>Overview:</h3>
+      
+    <p>Pneumonia is an inflammatory condition of the lung primarily affecting the small air sacs known as alveoli.
+      Symptoms typically include some combination of productive or dry cough, chest pain, fever and difficulty breathing.
+      The severity of the condition is variable. Pneumonia is usually caused by infection with viruses or bacteria, and 
+      less commonly by other microorganisms. Identifying the responsible pathogen can be difficult. Diagnosis is often based
+       on symptoms and physical examination. Chest X-rays, blood tests, and culture of the sputum may help confirm the diagnosis.
+        The disease may be classified by where it was acquired, such as community- or hospital-acquired or healthcare-associated pneumonia.
+  
+      Risk factors for pneumonia include cystic fibrosis, chronic obstructive pulmonary disease (COPD), sickle cell disease,
+       asthma, diabetes, heart failure, a history of smoking, a poor ability to cough (such as following a stroke), and a weak
+        immune system.Treatment depends on the underlying cause. Pneumonia believed to be due to bacteria is treated with antibiotics.
+        If the pneumonia is severe, the affected person is generally hospitalized.
+         Oxygen therapy may be used if oxygen levels are low.</p><br>
+    <h4>Causes</h4>
+    <p>Pneumonia is due to infections caused primarily by bacteria or viruses and less commonly by fungi and parasites. Although more
+       than 100 strains of infectious agents have been identified, only a few are responsible for the majority of cases. Mixed infections 
+       with both viruses and bacteria may occur in roughly 45% of infections in children and in 15% of infections in adults.
+        A causative agent may not be isolated in about half of cases despite careful testing. In an active population-based surveillance 
+        for community-acquired pneumonia requiring hospitalization in five hospitals in Chicago and Nashville from January 2010 through
+         June 2012, 2259 patients were identified who had radiographic evidence of pneumonia and specimens that could be tested for the
+          responsible pathogen. Most patients (62%) had no detectable pathogens in their sample, and unexpectedly, respiratory viruses were
+           detected more frequently than bacteria. Specifically, 23% had one or more viruses, 11% had one or more bacteria, 3% had both
+            bacterial and viral pathogens, and 1% had a fungal or mycobacterial infection. "The most common pathogens were human rhinovirus 
+            (in 9% of patients), influenza virus (in 6%), and Streptococcus pneumoniae (in 5%)."
+  
+      The term pneumonia is sometimes more broadly applied to any condition resulting in inflammation of the lungs (caused for example
+       by autoimmune diseases, chemical burns or drug reactions); however, this inflammation is more accurately referred to as pneumonitis.     
+      Factors that predispose to pneumonia include smoking, immunodeficiency, alcoholism, chronic obstructive pulmonary disease, sickle cell
+       disease (SCD), asthma, chronic kidney disease, liver disease, and biological aging. Additional risks in children include not
+        being breastfed, exposure to cigarette smoke and other air pollution, malnutrition, and poverty.The use of acid-suppressing medications
+         – such as proton-pump inhibitors or H2 blockers – is associated with an increased risk of pneumonia.
+          Approximately 10% of people who require mechanical ventilation develop ventilator-associated pneumonia,
+           and people with a gastric feeding tube have an increased risk of developing aspiration pneumonia. For people with certain variants
+            of the FER gene, the risk of death is reduced in sepsis caused by pneumonia. However, for those with TLR6 variants, the risk of
+             getting Legionnaires' disease is increased.</p>
+  </div>
+  
+  <h3 style="margin: auto;width: 80%; text-align: center; margin-top: 20px;  text-transform: uppercase">Pneumonia  Classification</h3>
+
+   <div style="text-align: center; margin-top: 20px">
+       <img style="max-width: 600px" src="{{ url_for('static', filename='Pneumonia.jpg') }}"/>
+   </div>
+
+  <form action="/upload11" method="post" enctype="multipart/form-data" style="margin-top: 30px; width: 80%; text-align: center; margin: auto;" onsubmit="showloading()">
+      <span class="btn btn-default btn-file">
+        Select Image <input type="file" name="image">
+    </span><br><br>
+        <input type="submit" value="Upload" class="btn btn-primary">
+  </form>
+  <hr>
+  <div style="text-align:center">
+  <!-- <a href="/"><input type="submit" value="Back to Home"></a></div> -->
+    <div style="text-align: center">
+        <img id="loading_image" style="display: none" src="{{ url_for('static', filename='loading.gif')}}">
+    </div>
+  </div>
+
+
+
+
+</div><br><br>
+  <footer class="bg-dark ">
+    <center><button type="button" class="btn bg-dark"><a href="mailto:lohit.cs19@bitsathy.ac.in" class="text-white">Contact</a></button></center>
+
+
+  </footer>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+
+</body>
+</html>
